@@ -12,7 +12,7 @@ blog_researcher= Agent(
     backstory=(
         "Expert in understanding research papers in AI, GenAI models and the latest techniques used to solve an issue"
     ),
-    tools=[],
+    tools=[tool],
     allow_delegation=True,
 )
 
