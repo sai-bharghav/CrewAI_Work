@@ -1,6 +1,16 @@
-from crewai import Agent
+from crewai import Agent, LLM
 from tools import tool
+from dotenv import load_dotenv
 
+load_dotenv()
+
+import os
+os.environ['OPENAI_API_KEY']=os.getenv('OPENAI_API_KEY')
+
+llm=LLM(
+    model="gpt-4o",
+    temperature=0
+)
 
 ## Create senior blog content researcher
 
@@ -13,6 +23,7 @@ blog_researcher= Agent(
         "Expert in understanding research papers in AI, GenAI models and the latest techniques used to solve an issue"
     ),
     tools=[tool],
+    llm=llm,
     allow_delegation=True,
 )
 
@@ -36,5 +47,6 @@ blog_writer = Agent(
     "like behind-the-scenes engineering breakdowns from real-world systems."
     ),
     tools=[tool],
+    llm=llm,
     allow_delegation=False
 )
