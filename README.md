@@ -38,17 +38,27 @@ Researcher Agent → Writer Agent → Final Article Output
 
 
 ## 📂 Project Structure
-CrewAI_Work/
-│
-├── agents.py # Agent definitions
-├── tasks.py # Task definitions
-├── tools.py # Custom tools (e.g., arXiv tool)
-├── main.py # Crew execution entry point
-│
-├── pyproject.toml # uv dependency management
-├── uv.lock
-├── .env # API keys (not committed)
-└── README.md
+CrewAI_Work/  
+
+│  
+
+├── agents.py # Agent definitions  
+
+├── tasks.py # Task definitions  
+
+├── tools.py # Custom tools (e.g., arXiv tool)  
+
+├── main.py # Crew execution entry point  
+
+│  
+
+├── pyproject.toml # uv dependency management  
+
+├── uv.lock  
+
+├── .env # API keys (not committed)  
+
+└── README.md  
 
 
 ---
@@ -100,3 +110,4 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 python crew.py
 ```
+
