@@ -1,4 +1,5 @@
 from crewai import Agent
+from tools import tool
 
 
 ## Create senior blog content researcher
